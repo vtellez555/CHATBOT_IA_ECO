@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory, redirect, url_for
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from openai import OpenAI
 from datetime import datetime
@@ -6,11 +6,9 @@ import random
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-import os
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 import psycopg2
-from psycopg2 import sql
 
 app = Flask(__name__)
 CORS(app, resources={
